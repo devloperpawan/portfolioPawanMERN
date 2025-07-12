@@ -1,72 +1,3 @@
-// import React from 'react'
-// import location from '../../assets/logo/location.png';
-// import contact from '../../assets/logo/mail.png'
-// import './contact.css';
-
-// const Contact = () => {
-//   return (
-//     <div className="md:w-[80%] w-[100%] m-auto bg-transparent flex flex-col items-center justify-center pt-5 mt-5 w-80%">
-//     <h2 className='text-4xl font-bold text-center text-gray-900'>Contacts</h2>
-//     <hr className='w-full text-gray-500 mt-4'/>
-//        <div className='w-[100%] flex md:flex-row flex-col justify-between mt-8'>
-//        {/* Form  */}
-
-//        <div className='bg-transparent md:w-[50%]'>
-//        <h2 className='text-4xl font-bold md:text-start text-center mb-8 text-gray-900'>Leave Us Your Info</h2>
-//        <form action="" className='p-5 bg-white w-full'>
-//        <article className=''>
-//         <span className='text-gray-500 text-lg font-medium'>Your Full Name ( Required )</span><br />
-//         <input type="text" className='bg-same border-none text-lg text-gray-500 border-gray-400 outline-0 w-full p-1 rounded text-shadow-2xs mt-1 bg-gray-200' name='name'/>
-//        </article>
-
-//        <article className='mt-2'>
-//         <span className='text-gray-500 text-lg font-medium'>Email (Required)</span><br />
-//         <input type="email" className='border-none text-lg text-gray-500 border-gray-400 outline-0 w-full p-1 rounded text-shadow-2xs mt-1 bg-same' name='email'/>
-//        </article>
-
-//        <article className='mt-2'>
-//         <span className='text-gray-500 text-lg font-medium'>Subjects</span><br />
-//         <input type="text" className='bg-same text-lg text-gray-500 border-gray-400 outline-0 w-full p-1 rounded text-shadow-2xs mt-1 border-none' name='subject'/>
-//        </article>
-
-//        <article className='mt-2'>
-//         <span className='text-gray-500 text-lg font-medium'>Your Message</span><br />
-//         <textarea type="text" className='bg-same text-lg text-gray-500 border-gray-400 outline-0 w-full p-1 rounded text-shadow-2xs mt-1 resize-none border-none' rows={6} name='message'/>
-//        </article>
-//        <button type='Submit' className='bg-yellow-400 hover:bg-yellow-500 p-2 text-white text-lg font-bold mt-2 rounded'>Send Message</button>
-//        </form>
-//        </div>     
-
-//        {/* Contact 2nd page */}
-//        <div className='md:w-[45%] w-[100%] bg-transparent'>
-//        <h2 className='text-4xl font-bold md:text-start text-center mt-3 mb-8 text-gray-900'>Contact Information</h2>
-
-//        <section className='w-full bg-white p-5 flex flex-col items-center rounded'>
-//        <span className='bg-yellow-500 p-3 rounded-3xl flex items-center justify-center'><img src={location} alt="Location Image" /></span>
-//        <article className='flex justify-between p-1 w-full text-gray-500'><span className='text-lg font-medium'>Country</span><span className='text-lg'>India</span></article> 
-
-//        <article className='flex justify-between p-1 w-full text-gray-500'><span className='text-lg font-medium'>City</span><span className='text-lg'>Siwan</span></article>
-
-//        <article className='flex justify-between p-1 w-full text-gray-500'><span className='text-lg font-medium'>Street</span><span className='text-lg'>Dilshadpur, Bhagwanpur Hat</span></article>
-//        </section>
-
-//        {/* Contact Details */}
-//        <section className='w-full bg-white p-5 flex flex-col items-center mt-2 rounded'>
-//        <span className='bg-yellow-500 p-3 rounded-3xl flex items-center justify-center'><img src={contact} alt="Contact Image" /></span>
-//        <article className='flex justify-between p-1 w-full text-gray-500'><span className='text-lg font-medium'>Email:</span><span className='text-lg'>krsinghpawan841408@gmail.com</span></article> 
-
-//        <article className='flex justify-between p-1 w-full text-gray-500'><span className='text-lg font-medium'>Phone no.:</span><span className='text-lg'>+91 7764842082</span></article>
-
-//        <article className='flex justify-between p-1 w-full text-gray-500'><span className='text-lg font-medium'>Linkedin:</span><span className='text-lg '>www.linkedin.com/pawan-singh</span>
-//        </article>
-//        </section>
-//        </div>
-//        </div>
-//     </div>
-//   )
-// }
-
-// export default Contact;
 import React, { useState } from 'react';
 import axios from 'axios'; // 👈 install this if not done
 import location from '../../assets/logo/location.png';
@@ -89,7 +20,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post('http://localhost:5000/api/contact', formData);
+      const res = await axios.post('https://portfoliopawanmern-backend.onrender.com/api/contact', formData);
       alert('✅ Message Sent Successfully');
       setFormData({ name: '', email: '', subject: '', message: '' }); 
     } catch (err) {

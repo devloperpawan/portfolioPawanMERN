@@ -12,7 +12,7 @@ const Project = () => {
 
   const fetchProjects = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/project");
+      const res = await axios.get("https://portfoliopawanmern-backend.onrender.com/api/project");
       setProjects(res.data);
     } catch (err) {
       console.error("Fetching Error", err);
@@ -35,7 +35,7 @@ const Project = () => {
           >
             <img
               className="w-full h-48 object-cover"
-              src={`http://localhost:5000/uploads/${project.image}`}
+              src={`https://portfoliopawanmern-backend.onrender.com/uploads/${project.image}`}
               alt={project.name}
             />
             <div className="px-6 py-4">
