@@ -91,7 +91,7 @@ const Contact = () => {
     try {
       const res = await axios.post('http://localhost:5000/api/contact', formData);
       alert('✅ Message Sent Successfully');
-      setFormData({ name: '', email: '', subject: '', message: '' }); // Reset form
+      setFormData({ name: '', email: '', subject: '', message: '' }); 
     } catch (err) {
       console.error('❌ Failed to send message:', err.response?.data || err.message);
       alert('❌ Failed to send message');

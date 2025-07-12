@@ -1,24 +1,3 @@
-// const dotenv = require('dotenv');
-// const cors = require('cors')
-// const express = require('express');
-// const connectDB = require('./config/db');
-// const contactRoutes = require('./routes/contactRoutes');
-
-// dotenv.config();
-// const app = express();
-
-// app.use(cors());
-// app.use(express.json())
-
-// connectDB();
-
-// app.use("/api", contactRoutes);
-// let PORT = process.env.PORT;
-// app.listen(PORT, ()=>{
-//     console.log(`Server Succesfull run on Port: ${PORT}`);
-// })
-
-
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
