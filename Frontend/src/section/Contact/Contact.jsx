@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios'; // 👈 install this if not done
 import location from '../../assets/logo/location.png';
 import contact from '../../assets/logo/mail.png';
-import './contact.css';
+import './Contact.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
